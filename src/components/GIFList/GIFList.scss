@@ -1,0 +1,78 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variables.scss";
+
+.gif-list {
+  &__empty {
+    text-align: center;
+    padding: 64px 32px;
+    color: #666;
+    font-size: 18px;
+
+    @include on-tablet {
+      padding: 48px 24px;
+      font-size: 16px;
+    }
+
+    @include on-mobile {
+      padding: 32px 16px;
+      font-size: 15px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+
+    @include on-tablet {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    @include on-mobile {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__load-more {
+    display: block;
+    margin: 32px auto;
+    padding: 12px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: $color-primary;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @include on-tablet {
+      padding: 10px 24px;
+      font-size: 15px;
+      margin: 24px auto;
+    }
+
+    @include on-mobile {
+      padding: 12px 24px;
+      font-size: 14px;
+      margin: 24px auto;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: #4f46e5;
+    }
+
+    &:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+  }
+}
+
