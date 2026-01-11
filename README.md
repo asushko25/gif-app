@@ -2,10 +2,13 @@
 
 A Vite + React + TypeScript project that uses a public GIF API to search and display GIFs.
 
+Live Demo: https://asushko25.github.io/gif-app/
+
 ## Getting Started
 
 ### 1. Clone the repository
 git clone https://github.com/asushko25/gif-app.git
+
 cd gif-app
 
 ### 2. Install dependencies
@@ -16,3 +19,4 @@ npm run dev
 
 The app will be available at:
 http://localhost:5174/
+
